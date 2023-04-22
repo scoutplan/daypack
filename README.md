@@ -1,8 +1,6 @@
 # Daypack
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/daypack`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Daypack contains a handful of language extensions that have proven useful in building [Scoutplan](https://github.com/scoutplan/scoutplan).
 
 ## Installation
 
@@ -16,7 +14,29 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-TODO: Write usage instructions here
+### Integer extensions
+#### mondays, tuesdays, wednesdays, thursdays, fridays, saturdays, sundays:
+
+Returns an ActiveSupport::Duration object. One can then do things like `3.tuesdays.from_now` or `5.saturdays.ago`
+
+### String extensions
+#### sentence_case
+
+Similar to titleize, but just capitalizes the first letter, like a sentence
+
+#### numeric?
+
+Returns true if the string evaluates to a number
+
+#### question?
+
+Returns true if the string ends in a question mark (?)
+
+### Time extensions
+
+#### time_of_day
+
+Returns a string corresponding to the part of the day. Possible values are `morning`, `afternoon`, `evening`, `night`
 
 ## Development
 
@@ -26,7 +46,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/daypack. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/daypack/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/scoutplan/daypack. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/scoutplan/daypack/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -34,4 +54,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Daypack project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/daypack/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Daypack project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/scoutplan/daypack/blob/master/CODE_OF_CONDUCT.md).

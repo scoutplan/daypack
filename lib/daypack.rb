@@ -4,5 +4,6 @@ require_relative "daypack/version"
 
 module Daypack
   class Error < StandardError; end
-  # Your code goes here...
+
+  Dir.glob("#{File.dirname(__FILE__)}/daypack/**/*.rb").each { |f| require f }
 end
