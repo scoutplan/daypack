@@ -1,6 +1,6 @@
 # Daypack
 
-Daypack contains a handful of language extensions that have proven useful in building [Scoutplan](https://github.com/scoutplan/scoutplan).
+Daypack contains a handful of Ruby and Rails extensions that have proven useful in building [Scoutplan](https://github.com/scoutplan/scoutplan).
 
 ## Installation
 
@@ -13,6 +13,11 @@ If bundler is not being used to manage dependencies, install the gem by executin
     $ gem install daypack
 
 ## Usage
+
+### Array extensions
+#### to_grammatical_list
+
+Converts an array to a grammatical list. For example, `['a', 'b', 'c'].to_grammatical_list` returns `a, b, and c`
 
 ### Integer extensions
 #### mondays, tuesdays, wednesdays, thursdays, fridays, saturdays, sundays:

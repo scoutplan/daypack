@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 # monkey-patch String with new methods
-
 module CoreExtensions
   module String
     # boolean method(s) additions to String
