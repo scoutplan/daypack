@@ -7,5 +7,5 @@ module Daypack
   class Error < StandardError; end
 
   Dir.glob("#{File.dirname(__FILE__)}/daypack/**/*.rb").sort.each { |f| require f }
-  I18n.load_path += Dir[File.expand_path("config/locales/*.yml")]
+  I18n.load_path += Dir.glob("#{File.dirname(__FILE__)}/locales/*.yml")
 end
