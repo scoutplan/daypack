@@ -19,6 +19,26 @@ module CoreExtensions
 
         [self[0..-2].join(", "), count > 2 && oxford_comma ? "," : "", " #{conjunction} ", last].join
       end
+
+      # Given an array, return the correct form of the verb "to be" for the subject and tense of the sentence
+      #
+      # Examples:
+      #
+      # %w[I].be_congugation => "am"
+      # %w[you].be_congugation => "are"
+      # %w[you].be_congugation(:past) => "were"
+      # %w[you].be_congugation(:future) => "will be"
+      # %w[Calvin].be_congugation => "is"
+      # %w[Calvin Andre].be_congugation => "are"
+      # %w[Calvin Andre].be_congugation(tense: :future) => "will"
+      #
+      def be_conjugation(tense: :present)
+        return I18n.t("be_conjugations.#{tense}.plural") if first.downcase == "you"
+        return I18n.t("be_conjugations.#{tense}.first_person_singular") if count == 1 && first.downcase == "i"
+
+        I18n.t("be_conjugations.#{tense}.#{count > 1 ? "plural" : "singular"}")
+      end
+      # see https://www.grammar.com/Conjugating-the-Verb-To-Be
     end
   end
 end

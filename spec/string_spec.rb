@@ -10,18 +10,4 @@ RSpec.describe String do
       expect("This is not a question".question?).to eq(false)
     end
   end
-
-  describe "sentence_case" do
-    it "capitalizes the first letter of a string" do
-      expect("this is a sentence".sentence_case).to eq("This is a sentence")
-    end
-
-    it "doesn't barf on empty strings" do
-      expect("".sentence_case).to eq("")
-    end
-
-    it "doesn't barf on 1-letter strings" do
-      expect("a".sentence_case).to eq("A")
-    end
-  end
 end

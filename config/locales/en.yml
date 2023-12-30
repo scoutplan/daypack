@@ -1,0 +1,17 @@
+en:
+  be_conjugations:
+    past:
+      singular: was
+      plural: were
+    present:
+      first_person_singular: am
+      singular: is
+      plural: are
+    present_perfect:
+      first_person_singular: have
+      second_person_singular: have
+      singular: has
+      plural: have
+    future:
+      singular: will be
+      plural: will be
