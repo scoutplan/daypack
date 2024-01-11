@@ -21,13 +21,13 @@ RSpec.describe Time do
 
   describe "next_occurrence_of" do
     it "returns later today if the time has not yet passed" do
-      result = Time.new(2020, 1, 1, 11, 0, 0).next_occurrence_of(12)
+      result = Time.new(2020, 1, 1, 11, 0, 0).next_occurrence_of(hour: 12)
       expect(result.day).to eq(1)
       expect(result.hour).to eq(12)
     end
 
     it "returns the following day if the time has already passed" do
-      result = Time.new(2020, 1, 1, 13, 0, 0).next_occurrence_of(12)
+      result = Time.new(2020, 1, 1, 13, 0, 0).next_occurrence_of(hour: 12)
       expect(result.day).to eq(2)
       expect(result.hour).to eq(12)
     end
