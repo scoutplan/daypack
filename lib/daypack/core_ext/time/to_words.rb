@@ -2,15 +2,19 @@
 
 module CoreExtensions
   module Time
+    NIGHT_STARTS_AT = 22
+    EVENING_STARTS_AT = 17
+    MORNING_ENDS_AT = 12
+
     # new Time method(s) for displaying words in the GUI
     module ToWords
-      # time_of_day method returns things like "morning"
+      # time_of_day method returns things like :morning
       def time_of_day
-        return "night" if hour > 22
-        return "evening" if hour > 17
-        return "morning" if hour < 12
+        return :night if hour > NIGHT_STARTS_AT
+        return :evening if hour > EVENING_STARTS_AT
+        return :morning if hour < MORNING_ENDS_AT
 
-        "afternoon"
+        :afternoon
       end
     end
   end

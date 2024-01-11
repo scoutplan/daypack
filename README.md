@@ -25,9 +25,6 @@ Converts an array to a grammatical list. For example, `['a', 'b', 'c'].to_gramma
 Returns an ActiveSupport::Duration object. One can then do things like `3.tuesdays.from_now` or `5.saturdays.ago`
 
 ### String extensions
-#### sentence_case
-
-Similar to titleize, but just capitalizes the first letter, like a sentence
 
 #### numeric?
 
@@ -36,6 +33,12 @@ Returns true if the string evaluates to a number
 #### question?
 
 Returns true if the string ends in a question mark (?)
+
+### Datetime extensions
+
+#### next_occurrence_of
+
+Returns the next occurrence of a given time. For example, `Time.now.next_occurrence_of(9, 0)` returns the next 9:00am.
 
 ### Time extensions
 
