@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# rubocop:disable Metrics/BlockLength
 RSpec.describe Array do
   describe "to_grammatical_list" do
     it "returns an empty string when the array is empty" do
@@ -40,4 +39,3 @@ RSpec.describe Array do
     end
   end
 end
-# rubocop:enable Metrics/BlockLength
