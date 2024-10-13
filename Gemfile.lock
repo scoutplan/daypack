@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    daypack (0.3.2)
-      activesupport (~> 7.1)
+    daypack (0.3.3)
+      activesupport (>= 7.1)
       i18n (~> 1.14)
 
 GEM
@@ -75,6 +75,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+  arm64-darwin-23
   x86_64-linux
 
 DEPENDENCIES

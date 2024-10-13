@@ -1,0 +1,6 @@
+en:
+  today: "today"
+  tomorrow: "tomorrow"
+  yesterday: "yesterday"
+  past: "%{count} ago"
+  future: "in %{count}"
